@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where In Borg - Backup Content Browser</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Where In Borg - Backup Content Browser</h1>
+        <input type="text" id="search-bar" placeholder="Search...">
+        <div id="filters">
+            <label for="filter-status">Status:</label>
+            <select id="filter-status">
+                <option value="all">All</option>
+                <option value="active">Active</option>
+                <option value="archived">Archived</option>
+            </select>
+        </div>
+    </header>
+    <main>
+        <table id="file-table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Size</th>
+                    <th>Date Modified</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- File rows will be populated here by JavaScript -->
+            </tbody>
+        </table>
+        <div id="pagination">
+            <button id="prev-page">Previous</button>
+            <span id="current-page">Page 1</span>
+            <button id="next-page">Next</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
