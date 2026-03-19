@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  zincsearch:
+    image: zincsearch/zincsearch:latest
+    ports:
+      - '4080:4080'
+    volumes:
+      - zinc_data:/data
+    environment:
+      - ZINCSEARCH_VERSION=latest
+
+  php:
+    image: php:8.0-apache
+    ports:
+      - '80:80'
+    volumes:
+      - ./php:/var/www/html
+    depends_on:
+      - zincsearch
+
+volumes:
+  zinc_data:
