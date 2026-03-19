@@ -1,0 +1,24 @@
+# Common .gitignore for PHP projects
+
+# Composer dependencies
+/vendor/
+
+# Configuration files
+/config/
+
+# Cache files
+/cache/
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# IDE files
+/.idea/
+/.vscode/
+
+# Operating system files
+.DS_Store
+Thumbs.db
